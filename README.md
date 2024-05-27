@@ -19,3 +19,6 @@ lando drush site:install --db-url=mysql://drupal10:drupal10@database/drupal10 -y
 
 ### Enable the custom module
 lando drush en random_api_users_data
+
+### Visit the page
+Go to Config in the admin menu and click on "Random API Users Data".
