@@ -25,12 +25,14 @@
 /web/vendor
 /web/core
 /web/modules/README.txt
+/web/modules/contrib
 /web/profiles/README.txt
 /web/sites/development.services.yml
 /web/sites/example.settings.local.php
 /web/sites/example.sites.php
 /web/sites/README.txt
 /web/themes/README.txt
+/web/themes/contrib
 /web/.csslintrc
 /web/.editorconfig
 /web/.eslintignore
@@ -60,3 +62,12 @@
 /drush
 /drupal.phar
 /drupal
+
+# Ignore other scaffold files
+#
+# Ignore all files placed directly at the project root. Rely on
+# .gitignore files placed by drupal/core-composer-scaffold to avoid
+# build errors that arise if non-ignored files are scaffolded.
+# ------------------------------------------------------------------
+/.editorconfig
+/.gitattributes

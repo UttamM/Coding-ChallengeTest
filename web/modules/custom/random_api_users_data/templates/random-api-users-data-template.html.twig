@@ -1,0 +1,41 @@
+<table class="table" id="random_api_users_data_table">
+  <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Counthy</th>
+        <th>Date of birth</th>
+        <th>Birthday</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users.results %}
+      <tr>
+        <td>{{ user.name.first }}</td>
+        <td>{{ user.name.last }}</td>
+        <td>{{ user.location.country }}</td>
+        <td>{{ user.dob.date|date("m-d-Y") }}</td>
+        <td>
+          {# Set Current Date #}
+          {% set currentDate = "now"|date("Y-m-d") %}
+          {# Set Current Year #}
+          {% set currentYear = "now"|date("Y") %}
+          {# Set user date of birth #}
+          {% set userBirthDate = user.dob.date|date("m-d") %}
+          {# Set user birth day in current year #}
+          {% set userBirthdayThisYear = currentYear ~ '-' ~ userBirthDate %}
+          {% set userBirthdayDate = userBirthdayThisYear|date("Y-m-d") %}
+
+          {# Birth Day Conditions #}
+          {% if userBirthdayDate == currentDate %}
+            Is today
+          {% elseif userBirthdayDate < currentDate %}
+            Already happened
+          {% else %}
+            Has yet to occur
+          {% endif %}
+        </td>
+      </tr>
+    {%- endfor %}
+  </tbody>
+</table>

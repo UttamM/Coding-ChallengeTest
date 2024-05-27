@@ -1,0 +1,16 @@
+name: brown-university
+recipe: drupal10
+config:
+  webroot: web
+  php: 8.2
+tooling:
+  phpcs:
+    service: appserver
+    cmd: "./vendor/bin/phpcs --standard=Drupal,DrupalPractice"
+    options:
+    description: Run phpcs for given folder or file.
+  phpcbf:
+    service: appserver
+    cmd: "./vendor/bin/phpcbf --standard=Drupal,DrupalPractice"
+    options:
+    description: Run phpcbf for given folder or file.

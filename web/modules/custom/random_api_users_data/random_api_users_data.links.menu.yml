@@ -1,0 +1,6 @@
+random_api_users_data.index:
+  title: 'Random API Users Data'
+  description: 'Random API Users Data.'
+  parent: user.admin_index
+  route_name: random_api_users_data.index
+  weight: 100

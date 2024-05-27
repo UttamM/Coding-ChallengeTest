@@ -1,0 +1,15 @@
+random-api-users-data-libraries:
+  css:
+    theme:
+      css/bootstrap.min.css : {}
+      css/dataTables.bootstrap5.css : {}
+  js:
+    js/bootstrap.bundle.min.js : {}
+    js/dataTables.js : {}
+    js/dataTables.bootstrap5.js : {}
+    js/script.js : {}
+  dependencies:
+    - core/drupalSettings
+    - core/jquery
+    - core/once
+    - core/drupal

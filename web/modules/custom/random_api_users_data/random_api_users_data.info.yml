@@ -1,0 +1,5 @@
+name: Random API Users Data
+description: Get Users list from API.
+type: module
+core_version_requirement: ^9 || ^10
+package: custom

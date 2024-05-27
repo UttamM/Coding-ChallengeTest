@@ -1,0 +1,7 @@
+random_api_users_data.index:
+  path: '/admin/config/people/random_api_users_data'
+  defaults:
+    _controller: '\Drupal\random_api_users_data\Controller\UsersController::index'
+    _title: 'Random API Users Data'
+  requirements:
+    _permission: 'administer site configuration'
