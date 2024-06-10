@@ -1,4 +1,4 @@
-# Brown-University-Coding-Test
+# Coding-Challenge
 
 ## Installation Setups
 
